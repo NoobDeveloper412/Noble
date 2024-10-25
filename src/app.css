@@ -1,0 +1,98 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+	font-family: 'Grafier';
+	src: url('/fonts/Grafier-BlackDisplay.woff') format('woff');
+}
+
+.opacity-1 {
+	opacity: 1;
+}
+.z-999 {
+	z-index: 999;
+}
+.z-9999 {
+	z-index: 9999;
+}
+.image-container {
+	z-index: -9 !important;
+}
+@media only screen and (min-width: 767px) {
+	* {
+		z-index: 9;
+	}
+	.mobile {
+		display: none;
+	}
+	.desktop {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.mobile {
+		display: block;
+	}
+	.desktop {
+		display: none;
+	}
+	.menu {
+		z-index: 9999;
+	}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1350px) {
+	.image-container {
+		max-width: 680px;
+		z-index: -9;
+	}
+	.hover-image-container {
+		z-index: 9;
+	}
+	.container {
+		width: 90%;
+	}
+	.image-container.ch-48 {
+		max-width: 48%;
+	}
+}
+
+/* Text Styles */
+/* styles.css */
+.c-h1 {
+	@apply font-black font-serif text-6xl leading-[3.75rem];
+}
+
+.c-h2 {
+	@apply font-black font-serif text-5xl leading-[3.75rem];
+}
+
+.c-h3 {
+	@apply font-black font-serif text-4xl leading-9;
+}
+
+.c-h4 {
+	@apply font-black font-serif text-2xl leading-6;
+}
+
+.card {
+	@apply w-100 bg-primary-300 relative mt-20 z-5;
+}
+
+.card.dark {
+	@apply bg-primary text-primary-300;
+}
+
+@screen sm {
+	.card {
+		@apply w-full max-w-screen-sm mt-10 mb-80;
+	}
+
+	.card.last {
+		@apply mb-0;
+	}
+}
+
+

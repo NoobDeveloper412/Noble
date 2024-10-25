@@ -1,0 +1,50 @@
+{
+	"name": "noblerogues-kit",
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"test:unit": "vitest",
+		"test": "npm run test:unit -- --run",
+		"lint": "eslint . && prettier --check .",
+		"format": "prettier --write ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^3.0.0",
+		"@sveltejs/kit": "^2.0.0",
+		"@sveltejs/vite-plugin-svelte": "^4.0.0",
+		"@tailwindcss/aspect-ratio": "^0.4.2",
+		"@tailwindcss/container-queries": "^0.1.1",
+		"@tailwindcss/forms": "^0.5.9",
+		"@tailwindcss/typography": "^0.5.15",
+		"@types/eslint": "^9.6.0",
+		"autoprefixer": "^10.4.20",
+		"eslint": "^9.7.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-svelte": "^2.36.0",
+		"globals": "^15.0.0",
+		"prettier": "^3.3.2",
+		"prettier-plugin-svelte": "^3.2.6",
+		"svelte": "^5.0.0",
+		"tailwindcss": "^3.4.14",
+		"vite": "^5.0.3",
+		"vitest": "^2.0.4"
+	},
+	"dependencies": {
+		"cssnano": "^7.0.6",
+		"cursor-dot": "^1.0.5",
+		"gsap": "^3.12.5",
+		"polka": "^0.5.2",
+		"postcss": "^8.4.47",
+		"postcss-import": "^16.1.0",
+		"postcss-load-config": "^6.0.1",
+		"postcss-nested": "^6.2.0",
+		"postcss-preset-env": "^10.0.7",
+		"sirv": "^3.0.0",
+		"svelte-image": "^0.2.9",
+		"svelte-intersection-observer": "^1.0.0",
+		"svelte-tooltip": "^1.2.0"
+	}
+}
