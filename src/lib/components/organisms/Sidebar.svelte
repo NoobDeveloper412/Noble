@@ -1,7 +1,5 @@
 <script>
 	import { Button } from '@atoms';
-	const Burger = '/icons/burger.svg';
-	const Close = '/icons/close.svg';
 	import { fly } from 'svelte/transition';
 	import { mobileWidth } from '../utils';
 	import { onMount } from 'svelte';
@@ -12,16 +10,18 @@
 		active = false;
 
 	const handleMenuToggle = () => {
-		active = !active;
-		if (active === true) {
+		console.log('handleMenuToggle');
+		active = !active; // Toggle active state first
+
+		if (active) {
 			document.body.classList.add('menu-expanded');
-		} else if (document.body.classList.contains('menu-expanded')) {
+		} else {
 			document.body.classList.remove('menu-expanded');
 		}
 	};
 
 	const handleMenuBlur = (e) => {
-		if (e.target !== menu && !menu.contains(e.target) && menu.classList.contains('active')) {
+		if (!menu.contains(e.target)) {
 			handleMenuToggle();
 		}
 	};
@@ -31,26 +31,57 @@
 	});
 </script>
 
-<svelte:window on:click={active && handleMenuBlur} bind:innerWidth={screenWidth} />
+<svelte:window on:click={handleMenuBlur} bind:innerWidth={screenWidth} />
+
 <div bind:this={menu} class={`menu fixed top-0 sm:right-0 h-screen z-10${active ? ' active' : ''}`}>
-	<Button
-		on:click={handleMenuToggle}
+	<button
+		on:click|stopPropagation={handleMenuToggle}
 		class="menu-button absolute top-0 sm:right-0 p-4 sm:py-4 sm:px-3 z-10"
 	>
 		{#if !active}
-			<img src={Burger} alt="Burger icon" class="pointer-events-none" />
+			<svg
+				width="40"
+				height="40"
+				viewBox="0 0 40 40"
+				fill="#F9F6F2"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<g style="mix-blend-mode:difference">
+					<rect x="12" y="14" width="16" height="4" />
+					<rect x="28" y="26" width="16" height="4" transform="rotate(-180 28 26)" />
+				</g>
+			</svg>
 		{:else}
-			<img src={Close} alt="Close icon" class="pointer-events-none" />
+			<svg
+				width="40"
+				height="40"
+				viewBox="0 0 40 40"
+				fill="#F9F6F2"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<g style="mix-blend-mode:difference">
+					<rect
+						x="15.8994"
+						y="13.0703"
+						width="16"
+						height="4"
+						transform="rotate(45 15.8994 13.0703)"
+					/>
+					<rect
+						x="27.1421"
+						y="15.8281"
+						width="16"
+						height="4"
+						transform="rotate(135 27.1421 15.8281)"
+					/>
+				</g>
+			</svg>
 		{/if}
-	</Button>
+	</button>
 	{#if active}
-		<!-- svelte-ignore a11y_click_events_have_key_events -->
-		<!-- svelte-ignore a11y_no_static_element_interactions -->
 		<div
-			class={`menu-dropdown flex flex-col absolute top-0 sm:right-0 h-full w-76 pt-20 overflow-hidden ${
-				active ? ' active' : ''
-			}`}
-			on:click={handleMenuToggle}
+			class={`menu-dropdown flex flex-col absolute top-0 sm:right-0 h-full w-76 pt-20 overflow-hidden${active ? ' active' : ''}`}
+			on:click|stopPropagation
 			transition:fly={{ x: offset, duration: 500 }}
 		>
 			<slot />

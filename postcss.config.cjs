@@ -16,7 +16,7 @@ module.exports = {
         production && cssnano({
             preset: [
                 'default',
-                {discardComments: {removeAll: true}},
+                { discardComments: { removeAll: true } },
             ],
         }),
     ].filter(Boolean)
