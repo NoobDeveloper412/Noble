@@ -33,6 +33,7 @@
 		"vitest": "^2.0.4"
 	},
 	"dependencies": {
+		"@sveltejs/adapter-static": "^3.0.6",
 		"cssnano": "^7.0.6",
 		"cursor-dot": "^1.0.5",
 		"gsap": "^3.12.5",

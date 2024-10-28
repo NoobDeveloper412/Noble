@@ -17,32 +17,32 @@
 			alt: 'ball',
 			src: '/images/chapter1/ball.png', // Direct source path
 			class: 'left-1/5 top-1/5 2xl:left-1/4',
-			title: 'Vaikutis',
+			title: 'The Trickster',
 			description:
-				'Sekliais gali dirbti net visai nedideli vaikučiai – beje, kuo jie nedidesni, tuo labiau jų niekas nepastebi: kas atkreips dėmesį į po kojom vis pasipainiojantį murziną gatvės vaikigalį? '
+				'Small children can work with deception – by the way, the smaller they are, the less they are noticed: who pays attention to a dirty street child stumbling around their feet?'
 		},
 		{
 			alt: 'movieTicket',
 			src: '/images/chapter1/movieTicket.png', // Direct source path
 			class: 'right-1/5 top-1/5 2xl:right-1/4',
-			title: 'Kino bilietų tikrintojas',
+			title: 'Movie Ticket Inspector',
 			description:
-				'Jo niekas nepastebi ir negirdi, o jis mato visus ir įsidėmi, ką tarpusavyje prieš filmo seansą kalbasi atsipalaidavę žiūrovai. '
+				'Nobody notices or hears him, but he sees everyone and remembers what relaxed viewers talk about before the movie starts.'
 		},
 		{
 			alt: 'passportSmall',
 			src: '/images/chapter1/passportSmall.png', // Direct source path
 			class: 'left-1/5 bottom-1/5 2xl:left-1/4',
-			title: 'Turistas',
+			title: 'Tourist',
 			description:
-				"Jis maklinėja svetimo miesto gatvėmis, vis pasiklysta, tad turi klausti kelio ir čia pat rasti progą smalltalk'ui, neįpareigojančiam paplepėjimui."
+				'He wanders the streets of a foreign city, often getting lost, so he has to ask for directions and immediately find an opportunity for small talk.'
 		},
 		{
 			alt: 'orange',
 			src: '/images/chapter1/orange.png', // Direct source path
 			class: 'right-1/5 bottom-1/5 2xl:right-1/4',
-			title: 'Daržovių pardavėjas',
-			description: 'Tas kuris kaskart jums padovanojantis papildomą apelsiną. '
+			title: 'Vegetable Seller',
+			description: 'The one who always gives you an extra orange.'
 		}
 	];
 

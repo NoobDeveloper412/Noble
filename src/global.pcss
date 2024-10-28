@@ -102,6 +102,7 @@
 	}
 	.menu-dropdown {
 		@apply bg-primary justify-end pb-8;
+		gap: 0.5em;
 	}
 
 	.menu {
@@ -1363,5 +1364,65 @@ img.cow {
 	.short_details {
 		font-size: 14px;
 		bottom: 28px;
+	}
+}
+.house {
+	margin-left: 5%;
+}
+.z-999 {
+	z-index: 999;
+}
+.about_page h2 {
+	margin-bottom: 35px;
+	font-weight: 900;
+	font-family: Grafier, serif;
+}
+.about_page h5 {
+	letter-spacing: 6px;
+	margin-bottom: 35px;
+}
+.about-2 .ab_jan {
+	max-width: 70%;
+}
+b {
+	font-weight: 600;
+	font-size: 24px;
+	font-family: Grafier, serif;
+}
+@screen sm {
+	.house {
+		max-width: 150%;
+		margin-left: 25%;
+		margin-right: -25%;
+	}
+	.ab_akio {
+		width: 50%;
+		margin: 0 auto;
+		position: fixed;
+		bottom: 15%;
+		left: 0;
+		right: 0;
+	}
+	.about-2 {
+		max-width: 82%;
+	}
+	img.object-contain.ab_visa {
+		max-width: 100px;
+	}
+	.f_area b {
+		font-size: 14px;
+	}
+	.f_area p {
+		font-size: 13px;
+	}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1350px) {
+	.about-2 {
+		max-width: 480px;
+	}
+	img.object-contain.ab_visa {
+		max-width: 170px;
+		left: 40%;
 	}
 }

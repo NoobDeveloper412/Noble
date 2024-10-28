@@ -1,10 +1,10 @@
 <script>
   import { Card } from "@atoms";
-  const tableSrc = "/images/chapter8/table.png";
+  const tableSrc = "/images/Chapter8/table.png";
 
-  const maidSrc = "/images/chapter8/maid.png";
+  const maidSrc = "/images/Chapter8/maid.png";
 
-  const akioSrc = "/images/chapter8/akio.png";
+  const akioSrc = "/images/Chapter8/akio.png";
 
   import { elementInViewport, handleTriggerClasses } from "@utils";
 

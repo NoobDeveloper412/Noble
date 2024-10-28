@@ -43,7 +43,7 @@
 <Container
 	{...$$props}
 	id="explanationContainer"
-	class="z-10 w-80 sm:w-64 absolute explanation-card hidden {positionX} {positions[
+	class="z-10 w-80 sm:w-64 absolute explanation-card hidden  {positions[
 		positionY
 	]} {variants[variant].shadow} {backgrounds[background]} "
 >

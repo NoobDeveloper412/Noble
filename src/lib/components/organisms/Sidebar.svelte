@@ -21,7 +21,7 @@
 	};
 
 	const handleMenuBlur = (e) => {
-		if (!menu.contains(e.target)) {
+		if (menu.contains(e.target)) {
 			handleMenuToggle();
 		}
 	};

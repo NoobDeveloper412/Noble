@@ -49,7 +49,7 @@
         cardClass="left-auto sm:left-0"
       >
         <div slot="content" class="w-full">
-          <p class="p-6">
+          <p class="p-6 !text-primary">
             His first wife was Russian, while he was Japanese. In those days,
             interracial marriages were not only very rare but also really
             unacceptable, especially in diplomatic circles. Perhaps his Russian
