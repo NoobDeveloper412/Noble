@@ -33,6 +33,7 @@
 		"vitest": "^2.0.4"
 	},
 	"dependencies": {
+		"@sveltejs/adapter-node": "^5.2.9",
 		"@sveltejs/adapter-static": "^3.0.6",
 		"cssnano": "^7.0.6",
 		"cursor-dot": "^1.0.5",
