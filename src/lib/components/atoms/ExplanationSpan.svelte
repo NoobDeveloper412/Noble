@@ -18,6 +18,10 @@
 </script>
 
 <svelte:window bind:innerWidth={screenWidth} />
-<span bind:this={element} class="relative border-b-4 text {$$props.class || ''}">
+<span
+	bind:this={element}
+	style="z-index: auto;"
+	class="relative border-b-4 text {$$props.class || ''}"
+>
 	<slot />
 </span>

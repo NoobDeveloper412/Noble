@@ -10,7 +10,7 @@
 	<title>{chapterTitles.chapter2}</title>
 </svelte:head>
 
-<ChoicesTemplate class="bg-sand">
+<ChoicesTemplate class="bg-sand" menu={false} >
 	<Chapter2YesPage1 bind:nextTrigger={trigger} />
 	<Chapter2YesPage2 bind:activeTrigger={trigger} />
 </ChoicesTemplate>

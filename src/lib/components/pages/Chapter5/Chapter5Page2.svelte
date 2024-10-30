@@ -53,7 +53,7 @@
     <Card
       class="w-max h-max max-w-md bg-primary relative mt-20 sm:w-full sm:max-w-screen-sm"
     >
-      <p class="text-primary-300">
+      <p class="text-primary-300!">
         There are six of us. Dad, Mom, Aaron, Tolik, me and Grandma.
       </p>
     </Card>

@@ -47,7 +47,7 @@
 		positionY
 	]} {variants[variant].shadow} {backgrounds[background]} "
 >
-	<div class="w-16px {variants[variant].background}" />
+	<div class="w-[16px] {variants[variant].background}" />
 	<div class="flex flex-col items-end w-80 md:w-76 text-sm">
 		<slot />
 		{#if href}

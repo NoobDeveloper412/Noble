@@ -34,7 +34,7 @@
   <div slot="story" class="animate-slideInBlurredBottom">
     <Card>
       <p class="mb-6" bind:this={triggerPoint}>
-        wartendijk often sent Nathan Dutch newspapers or at least football super
+        Zwartendijk often sent Nathan Dutch newspapers or at least football super
         league card cut-outs. But already from his first letters, Mr. Radio
         started talking less about football and more about this new gadget - an
         electric razor like the world has never seen before, Philishave - that
