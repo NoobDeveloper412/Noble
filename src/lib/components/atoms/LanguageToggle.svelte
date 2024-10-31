@@ -1,14 +1,37 @@
 <script>
-	import { language } from '../store/languageStore';
+	import { locale } from '../../i18n';
+	import { get } from 'svelte/store';
 
-	function switchToEnglish() {
-		language.set('en');
-	}
+	let currentLocale = get(locale);
 
-	function switchToJapanese() {
-		language.set('jp');
+	locale.subscribe(value => {
+		currentLocale = value;
+	});
+
+	function switchLocale(newLocale) {
+		locale.set(newLocale);
 	}
 </script>
 
-<button on:click={switchToEnglish}>English</button>
-<button on:click={switchToJapanese}>日本語</button>
+<button
+	on:click={() => switchLocale('en')}
+	class="flex items-center px-6 py-2 gap-x-2"
+	class:selected={currentLocale === 'en'}>
+	<img src="/icons/uk.png" alt="" class="h-6" />
+	EN
+</button>
+
+<button
+	on:click={() => switchLocale('jp')}
+	class="flex items-center px-6 py-2 gap-x-2"
+	class:selected={currentLocale === 'jp'}>
+	<img src="/icons/jp.png" alt="" class="h-6" />
+	JP
+</button>
+
+<style>
+	.selected {
+		background-color: #343941; 
+		color: white;
+	}
+</style>

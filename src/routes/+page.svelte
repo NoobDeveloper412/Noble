@@ -5,17 +5,16 @@
 	const rightSrc = '/images/right.png';
 	const sugiharaSrc = '/images/sugihara.png';
 	const LogoImage = '/images/noble_rogues_english_logo.png';
+	import { t } from 'svelte-i18n';
 
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
-	import LanguageToggle from '../lib/components/atoms/LanguageToggle.svelte';
 
 	let landingPage;
 	let content;
-	let header;
 	let logo;
 	let sugihara, cat, back, left, right, shortDetails;
-	let button, background;
+	let button;
 
 	const animateIn = (element, time) => {
 		setTimeout(() => {
@@ -70,7 +69,9 @@
 </script>
 
 <svelte:head>
-	<title>Noble Rogues</title>
+	<title>
+		{$t('title')}
+	</title>
 </svelte:head>
 
 <div
@@ -84,11 +85,12 @@
 		<a
 			href="en/01-how-to-recognize-spies"
 			class="link_btn_part fixed opacity-0 border-primary-300 text-primary-300"
-			bind:this={button}>Begin</a
+			bind:this={button}
 		>
-		<!-- <LanguageToggle /> -->
+			{$t('beginButton')}
+		</a>
 		<p class="short_details opacity-0 fixed" bind:this={shortDetails}>
-			most convenient to read on non-mobile screens
+			{$t('shortDetails')}
 		</p>
 	</div>
 
@@ -97,8 +99,8 @@
 		class="landing-page__content absolute inset-0 m-auto h-min w-max uppercase text-center tracking-3 leading-7 opacity-0 animate-focusInContractBck"
 		bind:this={content}
 	>
-		The story of how <br /> the courage of <br /> one determines the lives of
-		<br /> thousands
+		<!-- {$t('welcomeMessagePart1')} -->
+		<br />
 	</p>
 
 	<img class="logoimage absolute opacity-0" bind:this={logo} alt="LogoImage" src={LogoImage} />
@@ -131,7 +133,3 @@
 		/>
 	</div>
 </div>
-
-<style global lang="postcss">
-
-</style>

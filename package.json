@@ -45,6 +45,7 @@
 		"postcss-nested": "^6.2.0",
 		"postcss-preset-env": "^10.0.7",
 		"sirv": "^3.0.0",
+		"svelte-i18n": "^4.0.1",
 		"svelte-image": "^0.2.9",
 		"svelte-intersection-observer": "^1.0.0",
 		"svelte-tooltip": "^1.2.0"
